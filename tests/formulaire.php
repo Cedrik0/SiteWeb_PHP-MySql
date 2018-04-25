@@ -12,9 +12,7 @@
 <h1>Ma page web</h1>
 
 <p>
-    Cette page ne contient que du HTML.<br />
     Veuillez taper votre prénom :
-
 </p>
 
 <form action="cible.php" method="post">
@@ -32,8 +30,28 @@
         <option value="Canada">Canada</option>
         <option value="Egypte">Egypte</option>
     </select>
-</form>
 
+    <input type="checkbox" name="case" id="case" /> <label for="case">Ma case à cocher</label>
+    <br />
+    Aimez-vous les frites?
+    <input type="radio" name="frites" value="oui" id="oui" /> <label
+    for="oui">Oui</label>
+    <input type="radio" name="frites" value="non" id="non" /> <label for="non">Non</label>
+
+    <input type="hidden" name="pseudo" value="Mateo21">
+
+
+</form>
+<form action="cible_envoi.php" method="post" enctype="multipart/form-data">
+
+    <p>
+        Formulaire d'envoi de fichier :<br />
+        <input type="file" name="monfichier" /><br />
+        <input type="submit" value="Envoyer le fichier" />
+
+    </p>
+
+</form>
 
 
 <p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i:s'); ?>.</p>
